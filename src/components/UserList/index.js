@@ -89,7 +89,6 @@ class UserList extends Component {
             this.setState({ q: filter, loading: true }, () => {
                 this.loadData({ q: filter });
             });
-
         }
     }
 
@@ -114,7 +113,6 @@ class UserList extends Component {
                     let filterData = this.filterUsers(data.users, query);
 
                     if (params._order !== undefined) {
-                        debugger;
                         filterData = _.orderBy(filterData, [params._sort],[params._order]);
                     }
 
